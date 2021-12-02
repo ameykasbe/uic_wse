@@ -8,9 +8,19 @@
     <title>Document</title>
 </head>
 <body>
-    {% for link in links %}
-        <h1>{{link.name}}</h1>
-        <p>{{link.link}}</p>
-    {% endfor %}
+    <table>
+        <thead>
+            <tr>
+                <td>Link</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for link in links %}
+            <tr>
+                <td>{{link}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>

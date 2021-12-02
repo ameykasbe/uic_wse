@@ -3,22 +3,13 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-    links = [
-        {
-            "name": "UIC Main page",
-            "link": "www.google.edu",
-        },
-        {
-            "name": "UIC page 2",
-            "link": "www.uic2.edu"
-        },
-        {
-            "name": "UIC page 3",
-            "link": "www.uic3.edu"
-            } 
-       ]
+    
+    # Get info from file
+
+    links = ["www.google.edu", "www.facebook.com", "www.instagram.com"]
+
     context = {
-        'links' : links 
+        'links' : links
     }
     return render(request, "webcrawler/home.html", context)
 
